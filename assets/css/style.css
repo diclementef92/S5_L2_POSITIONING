@@ -16,18 +16,17 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
-.blue-underline {
-  position: absolute;
-  top: 2em;
-  /* float: inline-end; */
+.text-underline {
+  position: relative;
+  display: inline;
 }
-@media screen and (min-width: 1080px) {
-  .blue-underline {
-    top: 1em;
-    right: 10vw;
-  }
-  .blue-underline svg {
-    /* width: 50vw; */
+.blue-line {
+  position: absolute;
+  top: 0.8em;
+}
+@media screen and (min-width: 820px) {
+  .blue-line {
+    left: -10vw;
   }
 }
 
@@ -338,6 +337,14 @@ aside div {
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+  position: relative;
+}
+aside .fa-tag {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 3em;
+  color: rgb(200, 200, 200);
 }
 
 @media screen and (min-width: 1200px) {
