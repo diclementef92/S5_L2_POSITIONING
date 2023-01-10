@@ -16,6 +16,21 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
+.blue-underline {
+  position: absolute;
+  top: 2em;
+  /* float: inline-end; */
+}
+@media screen and (min-width: 1080px) {
+  .blue-underline {
+    top: 1em;
+    right: 10vw;
+  }
+  .blue-underline svg {
+    /* width: 50vw; */
+  }
+}
+
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -31,6 +46,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0px;
+  z-index: 1; /*permette di essere sopra altri elementi con attributo relative */
 }
 
 @media screen and (min-width: 800px) {
@@ -116,6 +134,9 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: -1em;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -126,6 +147,7 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+  position: relative;
 }
 
 p,
@@ -331,6 +353,40 @@ aside div p:last-child {
   text-align: right;
 }
 
+/* side-icons  */
+.side-icons i {
+  position: fixed;
+  font-size: 1.8em;
+  padding: 10px;
+  right: -2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: white 2px solid;
+  border-radius: 20%;
+  z-index: 1;
+}
+.side-icons .fa-square-plus {
+  top: 40vh;
+  color: rgb(45, 112, 255);
+}
+.side-icons .fa-calendar-days {
+  top: 50vh;
+  color: rgb(45, 112, 255);
+}
+.side-icons .fa-square-caret-up {
+  top: 60vh;
+  color: rgb(232, 104, 255);
+}
+@media screen and (min-width: 700px) {
+  .side-icons .fa-square-plus {
+    top: 1vh;
+  }
+  .side-icons .fa-calendar-days {
+    top: 8vh;
+  }
+  .side-icons .fa-square-caret-up {
+    top: 93vh;
+  }
+}
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
